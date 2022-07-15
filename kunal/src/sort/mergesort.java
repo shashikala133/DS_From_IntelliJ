@@ -14,9 +14,10 @@ public class mergesort {
         int mid=arr.length/2;
         int[] left = mergeSort(Arrays.copyOfRange(arr,0,mid));
         int[] right = mergeSort(Arrays.copyOfRange(arr,mid,arr.length));
-        return merge(left,right);
+        return merge(left,right,mid);
     }
-    static int[] merge(int[] first,int[] second){
+    static int[] merge(int[] first,int[] second,int mid){
+        int inversion=0;
         int[] mix = new int[first.length+second.length];
         int i=0,j=0,k=0;
       while(i< first.length && j< second.length){
@@ -27,6 +28,7 @@ public class mergesort {
           else{
               mix[k]=second[j];
               j++;
+              inversion+=mid-i;
           }
           k++;
       }
