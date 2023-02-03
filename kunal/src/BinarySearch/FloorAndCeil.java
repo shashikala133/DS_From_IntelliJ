@@ -5,7 +5,7 @@ public class FloorAndCeil {
         int[] arr ={2,3,5,9,14,16,18};
         int target=15;
         System.out.println(ceil(arr,target));
-        System.out.println(floor(arr,target));
+        //System.out.println(floor(arr,target));
     }
     //find the smallest no greater than the target no
     static int ceil(int[] arr,int target){
